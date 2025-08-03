@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background: #0F1419;
+    min-height: 100vh;
+    color: #ffffff;
+  }
+  
+  * {
+    color: inherit;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  
+  p, span, div {
+    color: #ffffff;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .gradient-text {
+    color: #6B8FFF; /* Fallback color */
+    background: linear-gradient(135deg, #4F7EFC, #6B8FFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .glass-card {
+    background: rgba(26, 31, 41, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(55, 65, 81, 0.3);
+  }
+  
+  .navy-gradient {
+    background: linear-gradient(135deg, #0F1419 0%, #1A1F29 100%);
+  }
+  
+  .primary-gradient {
+    background: linear-gradient(135deg, #4F7EFC, #6B8FFF);
+  }
+  
+  .platform-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  
+  .platform-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  
+  .platform-twitter {
+    background: #4F7EFC;
+  }
+  
+  .platform-linkedin {
+    background: #4F7EFC;
+  }
+  
+  .platform-reddit {
+    background: #f59e0b;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Ensure all MUI components have visible text */
+  .MuiTypography-root {
+    color: #ffffff !important;
+  }
+  
+  .MuiInputBase-input {
+    color: #ffffff !important;
+  }
+  
+  .MuiFormLabel-root {
+    color: #9CA3AF !important;
+  }
+  
+  .MuiButton-root {
+    color: #ffffff !important;
+  }
+} 
+
+/* Apple Glassmorphism Theme Utilities */
+.apple-glass-bg {
+  position: relative;
+  background: linear-gradient(135deg, rgba(15,20,25,0.92) 0%, rgba(26,31,41,0.92) 100%);
+  border-radius: 32px;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.55);
+  backdrop-filter: blur(32px);
+  border: 1.5px solid rgba(120, 140, 255, 0.10);
+  overflow: hidden;
+}
+.apple-glass-card {
+  background: rgba(24, 28, 36, 0.82);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px 0 rgba(80,120,255,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.18);
+  border: 1.5px solid rgba(120, 140, 255, 0.10);
+  backdrop-filter: blur(24px);
+  overflow: hidden;
+}
+.apple-glass-grid::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 80px),
+              repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 80px);
+}
+.apple-blue-btn {
+  background: linear-gradient(90deg, #4F7EFC 0%, #6B8FFF 100%);
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px 0 rgba(80,120,255,0.18);
+  letter-spacing: 0.01em;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.apple-blue-btn:hover {
+  background: linear-gradient(90deg, #6B8FFF 0%, #4F7EFC 100%);
+  box-shadow: 0 8px 32px rgba(80,120,255,0.22);
+  transform: translateY(-2px) scale(1.04);
+} 
